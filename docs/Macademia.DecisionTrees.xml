@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xsi:type="TaskPaneApp">
+  <Id>396b9627-3919-4f47-b82c-a46a69888cca</Id>
+  <Version>1.0.0.1</Version>
+  <ProviderName>Macademia</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Macademia — Decision Trees"/>
+  <Description DefaultValue="Build and analyze decision trees directly in Excel for Mac."/>
+  <IconUrl DefaultValue="https://macademia-create.github.io/Decision-Tree/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://macademia-create.github.io/Decision-Tree/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://macademia-create.github.io/Decision-Tree/help.html"/>
+  <AppDomains><AppDomain>https://macademia-create.github.io/Decision-Tree</AppDomain></AppDomains>
+  <Hosts><Host Name="Workbook"/></Hosts>
+  <Requirements><Sets DefaultMinVersion="1.9"><Set Name="ExcelApi" MinVersion="1.9"/></Sets></Requirements>
+  <DefaultSettings><SourceLocation DefaultValue="https://macademia-create.github.io/Decision-Tree/taskpane.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Requirements><bt:Sets DefaultMinVersion="1.1"><bt:Set Name="ExcelApi" MinVersion="1.9"/></bt:Sets></Requirements>
+    <Hosts><Host xsi:type="Workbook"><DesktopFormFactor>
+      <FunctionFile resid="Commands.Url"/>
+      <ExtensionPoint xsi:type="PrimaryCommandSurface"><OfficeTab id="TabHome"><Group id="Macademia.DecisionTrees.Group">
+        <Label resid="Suite.Label"/>
+        <Icon><bt:Image size="16" resid="Icon.16"/><bt:Image size="32" resid="Icon.32"/><bt:Image size="80" resid="Icon.80"/></Icon>
+        <Control xsi:type="Button" id="Macademia.DecisionTrees.Open">
+          <Label resid="Button.Label"/>
+          <Supertip><Title resid="Button.Label"/><Description resid="Button.Help"/></Supertip>
+          <Icon><bt:Image size="16" resid="Icon.16"/><bt:Image size="32" resid="Icon.32"/><bt:Image size="80" resid="Icon.80"/></Icon>
+          <Action xsi:type="ShowTaskpane"><TaskpaneId>Macademia.DecisionTrees</TaskpaneId><SourceLocation resid="Taskpane.Url"/></Action>
+        </Control>
+      </Group></OfficeTab></ExtensionPoint>
+    </DesktopFormFactor></Host></Hosts>
+    <Resources>
+      <bt:Images><bt:Image id="Icon.16" DefaultValue="https://macademia-create.github.io/Decision-Tree/assets/icon-16.png"/><bt:Image id="Icon.32" DefaultValue="https://macademia-create.github.io/Decision-Tree/assets/icon-32.png"/><bt:Image id="Icon.80" DefaultValue="https://macademia-create.github.io/Decision-Tree/assets/icon-80.png"/></bt:Images>
+      <bt:Urls><bt:Url id="Commands.Url" DefaultValue="https://macademia-create.github.io/Decision-Tree/commands.html"/><bt:Url id="Taskpane.Url" DefaultValue="https://macademia-create.github.io/Decision-Tree/taskpane.html"/></bt:Urls>
+      <bt:ShortStrings><bt:String id="Suite.Label" DefaultValue="Macademia"/><bt:String id="Button.Label" DefaultValue="Decision Trees"/></bt:ShortStrings>
+      <bt:LongStrings><bt:String id="Button.Help" DefaultValue="Open Macademia — Decision Trees. Build, edit, analyze and export decision trees in this workbook."/></bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
